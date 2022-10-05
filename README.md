@@ -18,23 +18,23 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## L5-Swagger
 
 Step 1: Install swagger via composer:  
-composer require "darkaonline/l5-swagger"  
+> composer require "darkaonline/l5-swagger"  
 
 or you can also remove swagger by this command line:  
-composer remove "darkaonline/l5-swagger"  
+> composer remove "darkaonline/l5-swagger"  
 
 Step 2: Publish your config swagger file  
-php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
+> php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
 
 Step 3: Go to .env laravel file. add this line below to allow Swagger always generate:  
-L5_SWAGGER_GENERATE_ALWAYS=true  
+> L5_SWAGGER_GENERATE_ALWAYS=true  
 Or if not, just run command line: php artisan l5-swagger:generate.
   
 Note: 👀 You can change swagger ui PATH by go to config laravel file, find l5-swagger.php and change config.  
 If you want to see demo your first swagger ui, then add this line first into your base Controller  
-/**
- * @OA\Info(title="Demo swagger", version="any")
- */  
- Okay...  
+ > /* *  
+ > * @OA\Info(title="Demo swagger", version="any")  
+ > * /  
+ 
  Step 4: Run command line:  
- php artisan l5-swagger:generate
+ > php artisan l5-swagger:generate
